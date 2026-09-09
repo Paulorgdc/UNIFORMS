@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uniforms - Login</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .login-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            width: 100%;
+        }
+        .login-card {
+            width: 100%;
+            max-width: 400px;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-wrapper">
+        <div class="glass-card login-card text-center p-5">
+            <h2 class="text-primary fw-bold mb-4">UNIFORMS</h2>
+            <form id="loginForm">
+                <div class="mb-3 text-start">
+                    <label class="form-label" for="username">Usuário</label>
+                    <input type="text" id="username" class="form-control" placeholder="professor ou coordenador" required>
+                </div>
+                <div class="mb-4 text-start">
+                    <label class="form-label" for="password">Senha</label>
+                    <input type="password" id="password" class="form-control" placeholder="123" required>
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Entrar no Sistema</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

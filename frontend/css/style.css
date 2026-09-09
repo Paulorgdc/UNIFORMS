@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --bg-dark: #0f111a;
+    --accent-primary: #6366f1;
+    --accent-secondary: #a855f7;
+    --glass-bg: rgba(255, 255, 255, 0.03);
+    --glass-border: rgba(255, 255, 255, 0.08);
+    --text-main: #f8fafc;
+    --text-muted: #94a3b8;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-dark) !important;
+    background-image: 
+        radial-gradient(circle at 15% 50%, rgba(99, 102, 241, 0.12), transparent 25%),
+        radial-gradient(circle at 85% 30%, rgba(168, 85, 247, 0.12), transparent 25%);
+    background-attachment: fixed;
+    color: var(--text-main) !important;
+    margin: 0;
+    min-height: 100vh;
+}
+
+.navbar {
+    display: none !important; 
+}
+
+.d-flex, .app-layout {
+    min-height: 100vh;
+    display: flex;
+    width: 100%;
+}
+
+.sidebar {
+    width: 280px;
+    background: var(--glass-bg);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-right: 1px solid var(--glass-border);
+    box-shadow: 4px 0 24px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    padding: 2rem !important;
+}
+
+.sidebar h5, .sidebar h4 {
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 1.2rem;
+    background: linear-gradient(to right, var(--accent-primary), var(--accent-secondary));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 2rem !important;
+}
+
+.nav-link {
+    color: var(--text-muted) !important;
+    border-radius: 12px;
+    margin-bottom: 0.5rem;
+    padding: 12px 20px !important;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover, .nav-link.active {
+    background: rgba(99, 102, 241, 0.15);
+    color: var(--text-main) !important;
+    transform: translateX(8px);
+    border-left: 4px solid var(--accent-primary);
+}
+
+#logout-button {
+    border-radius: 10px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.main-content, .flex-grow-1 {
+    padding: 3rem !important;
+    width: calc(100% - 280px);
+}
+
+h1, h3 {
+    font-weight: 700 !important;
+    margin-bottom: 1.5rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+.scheduling-form, .glass-card, #calendar-container {
+    background: var(--glass-bg) !important;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border) !important;
+    border-radius: 20px;
+    padding: 2.5rem !important;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+    margin-bottom: 2rem;
+}
+
+.form-label {
+    color: var(--text-muted);
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.form-control, .form-select {
+    background-color: rgba(0,0,0,0.25) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    color: var(--text-main) !important;
+    border-radius: 12px;
+    padding: 12px 15px;
+    transition: all 0.3s;
+}
+
+.form-control:focus, .form-select:focus {
+    box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.2) !important;
+    border-color: var(--accent-primary) !important;
+}
+
+::placeholder {
+    color: rgba(255, 255, 255, 0.3) !important;
+}
+
+option {
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary)) !important;
+    border: none !important;
+    border-radius: 12px;
+    padding: 12px 24px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(168, 85, 247, 0.4);
+}
+
+.list-group-item {
+    background: rgba(255, 255, 255, 0.02) !important;
+    border: 1px solid var(--glass-border) !important;
+    border-radius: 16px !important;
+    margin-bottom: 12px;
+    color: var(--text-main);
+    padding: 1.2rem;
+    transition: transform 0.2s;
+}
+
+.list-group-item:hover {
+    transform: scale(1.01);
+    background: rgba(255, 255, 255, 0.05) !important;
+}
+
+.badge {
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 0.85rem;
+}
+
+.bg-success { background-color: rgba(16, 185, 129, 0.2) !important; color: #34d399 !important; border: 1px solid rgba(16, 185, 129, 0.3); }
+.bg-danger { background-color: rgba(239, 68, 68, 0.2) !important; color: #f87171 !important; border: 1px solid rgba(239, 68, 68, 0.3); }
+.bg-warning { background-color: rgba(245, 158, 11, 0.2) !important; color: #fbbf24 !important; border: 1px solid rgba(245, 158, 11, 0.3); }
+
+.calendar-header {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.calendar-header h3 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 12px;
+}
+
+.calendar-day {
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid var(--glass-border);
+    border-radius: 12px;
+    padding: 10px;
+    min-height: 90px;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s;
+}
+
+.calendar-header-day {
+    min-height: auto;
+    text-align: center;
+    background: transparent;
+    border: none;
+    color: var(--accent-muted);
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+}
+
+.calendar-day:not(.calendar-header-day):hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+.day-number {
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+    color: var(--text-muted);
+}
+
+.has-event {
+    border-color: var(--accent-primary);
+    background: rgba(99, 102, 241, 0.08);
+}
+
+.has-event .day-number {
+    color: var(--accent-primary);
+}
+
+.event-item {
+    background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+    color: white;
+    font-size: 0.7rem;
+    padding: 4px 8px;
+    border-radius: 6px;
+    margin-top: auto;
+    text-align: center;
+    font-weight: 500;
+    box-shadow: 0 2px 8px rgba(99, 102, 241, 0.4);
+}

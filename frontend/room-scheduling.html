@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Uniforms - Salas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="app-layout">
+        <aside class="sidebar">
+            <h4 class="text-primary mb-4 fw-bold text-center">UNIFORMS</h4>
+            <div class="user-profile mb-4 p-3 rounded" style="background: rgba(255,255,255,0.03); border: 1px solid var(--glass-border);">
+                <p class="mb-3 text-secondary text-center" style="font-size: 0.9rem;">
+                    Olá, <strong id="loggedInUserName" class="text-white"></strong>
+                </p>
+                <button id="logout-button" class="btn btn-outline-danger btn-sm w-100">Sair da Conta</button>
+            </div>
+            <nav class="nav flex-column">
+                <a class="nav-link" href="dashboard.html">Dashboard</a>
+                <a class="nav-link active" href="room-scheduling.html">Agendamento de Salas</a>
+                <a class="nav-link" href="equipment-scheduling.html">Agendamento de Equipamentos</a>
+                <a class="nav-link" href="approvals.html">Aprovação</a>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <h1 class="mb-4">Agendamento de Salas</h1>
+            <div class="scheduling-form mb-5">
+                <h3 class="mb-3">Nova Solicitação de Sala</h3>
+                <form id="schedulingForm" data-type="room">
+                    <div class="mb-3">
+                        <label for="itemSelect" class="form-label">Sala</label>
+                        <select class="form-select" id="itemSelect" required>
+                            <option value="">Selecione uma sala</option>
+                            <option value="Sala 101 - Bloco A">Sala 101 - Bloco A</option>
+                            <option value="Laboratório de Informática">Laboratório de Informática</option>
+                            <option value="Auditório Principal">Auditório Principal</option>
+                        </select>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-md-4">
+                            <label for="scheduleDate" class="form-label">Data</label>
+                            <input type="date" class="form-control" id="scheduleDate" required>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="startTime" class="form-label">Hora Início</label>
+                            <input type="time" class="form-control" id="startTime" required>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="endTime" class="form-label">Hora Fim</label>
+                            <input type="time" class="form-control" id="endTime" required>
+                        </div>
+                    </div>
+                    <div class="d-grid">
+                        <button type="submit" class="btn btn-primary">Solicitar Agendamento</button>
+                    </div>
+                </form>
+            </div>
+            <h3 class="mb-3">Meus Agendamentos</h3>
+            <div id="appointmentsList"></div>
+        </main>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
